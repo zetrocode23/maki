@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Dégradé de fond coloré */
+            margin: 0;
+            text-align: center;
+        }
+        h1 {
+            color: #fff; /* Couleur du titre */
+            font-size: 36px; /* Taille du titre */
+            margin-bottom: 20px; /* Espace sous le titre */
+        }
+        .button-container {
+            display: flex;
+            gap: 30px; /* Espace entre les boutons */
+        }
+        .button {
+            padding: 15px 25px; /* Padding pour un bouton plus grand */
+            border: none;
+            border-radius: 10px; /* Coins arrondis */
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px; /* Taille de la police */
+            text-decoration: none; /* Supprime le soulignement des liens */
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centre le texte */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre portée */
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transition */
+        }
+        .button-youtube {
+            background-color: #FF0000; /* Couleur YouTube */
+            color: white;
+        }
+        .button-twitch {
+            background-color: #9146FF; /* Couleur Twitch */
+            color: white;
+        }
+        .button-tiktok {
+            background-color: #69C9D0; /* Couleur TikTok */
+            color: white;
+        }
+        .button:hover {
+            transform: translateY(-5px); /* Élévation lors du survol */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée */
+        }
+        .button:active {
+            transform: translateY(0); /* Rétablit la position lors du clic */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Bienvenue Maki</h1>
+<div class="button-container">
+    <a href="https://www.youtube.com" class="button button-youtube">YouTube</a>
+    <a href="https://www.twitch.tv" class="button button-twitch">Twitch</a>
+    <a href="https://www.tiktok.com" class="button button-tiktok">TikTok</a>
+</div>
+
+</body>
+</html>
