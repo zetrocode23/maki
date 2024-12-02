@@ -15,23 +15,28 @@
             margin: 0;
             color: #333;
         }
+
         .login-container {
             background-color: white;
             padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px; /* Légèrement plus arrondi */
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             width: 90%;
             max-width: 400px;
             transition: transform 0.2s;
         }
+
         .login-container:hover {
             transform: scale(1.02);
         }
+
         .login-container h2 {
             text-align: center;
             margin-bottom: 20px;
             color: #5cb85c;
+            font-size: 24px; /* Taille de police augmentée */
         }
+
         .login-container input[type="text"],
         .login-container input[type="password"] {
             width: 100%;
@@ -41,11 +46,13 @@
             border-radius: 4px;
             transition: border-color 0.3s;
         }
+
         .login-container input[type="text"]:focus,
         .login-container input[type="password"]:focus {
             border-color: #5cb85c;
             outline: none;
         }
+
         .login-container input[type="submit"] {
             width: 100%;
             padding: 12px;
@@ -57,14 +64,17 @@
             cursor: pointer;
             transition: background-color 0.3s, transform 0.2s;
         }
+
         .login-container input[type="submit"]:hover {
             background-color: #4cae4c;
-            transform: translateY(-2px); /* Légère élévation lors du survol */
+            transform: translateY(-2px);
         }
+
         .login-container input[type="submit"]:active {
-            background-color: #449d44; /* Couleur lors du clic */
-            transform: translateY(0); /* Réinitialisation de l'élévation */
+            background-color: #449d44;
+            transform: translateY(0);
         }
+
         .error-message {
             color: red;
             text-align: center;
