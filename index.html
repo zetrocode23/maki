@@ -17,7 +17,13 @@
             flex-direction: column; /* Ajouté pour empiler les boutons et le conteneur de connexion */
         }
 
-        .redirect-button, .game-button {
+        .button-container {
+            display: flex; /* Utilisation de Flexbox pour aligner les boutons horizontalement */
+            justify-content: center; /* Centrer les boutons */
+            margin-bottom: 20px; /* Espacement entre les boutons et le conteneur de connexion */
+        }
+
+        .redirect-button, .game-button, .show-password-button {
             background-color: #5cb85c;
             color: white;
             border: none;
@@ -25,11 +31,11 @@
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-            margin-bottom: 20px; /* Espacement entre les boutons et le conteneur de connexion */
+            margin: 0 10px; /* Espacement entre les boutons */
             transition: background-color 0.3s;
         }
 
-        .redirect-button:hover, .game-button:hover {
+        .redirect-button:hover, .game-button:hover, .show-password-button:hover {
             background-color: #4cae4c;
         }
 
@@ -102,16 +108,18 @@
 </head>
 <body>
 
-<button class="game-button" onclick="window.location.href='URL_DU_JEU_SNAKE'">Jouer au Snake Game</button>
-
-<button class="redirect-button" onclick="window.location.href='https://zetrocode.github.io/maki-esport/'">Redirect to Main Website</button>
+<div class="button-container">
+    <button class="game-button" onclick="window.location.href='URL_DU_JEU_SNAKE'">Jouer au Snake Game</button>
+    <button class="redirect-button" onclick="window.location.href='https://zetrocode.github.io/maki-esport/'">Redirect to Main Website</button>
+</div>
 
 <div class="login-container">
     <h2>Connexion</h2>
     <form id="loginForm" onsubmit="return validateForm()">
         <input type="text" name="username" placeholder="Nom d'utilisateur" value="maki" required aria-label="Nom d'utilisateur">
-        <input type="password" name="password" placeholder="Mot de passe" required aria-label="Mot de passe">
-        <input type="submit" value="Se connecter" aria-label="Se connecter">
+        <input type="password" name="password" placeholder="Mot de passe" required aria-label="Mot de passe" id="password">
+        <button type="button" class="show-password-button" onclick="togglePasswordVisibility()">Afficher le mot de passe</button>
+                <input type="submit" value="Se connecter" aria-label="Se connecter">
         <div class="error-message" id="error-message">Le mot de passe est incorrect</div>
     </form>
 </div>
@@ -122,4 +130,22 @@
         const correctPassword = 'amirbaroudi'; // Le mot de passe correct
         const errorMessage = document.getElementById('error-message');
 
-       
+        if (password !== correctPassword) {
+            errorMessage.style.display = 'block'; // Affiche le message d'erreur
+            return false; // Empêche l'envoi du formulaire
+        }
+
+        errorMessage.style.display = 'none'; // Cache le message d'erreur
+        window.location.href = 'main.html'; // Redirige vers main.html
+        return false; // Empêche l'envoi du formulaire pour éviter le rechargement
+    }
+
+    function togglePasswordVisibility() {
+        const passwordInput = document.getElementById('password');
+        const passwordType = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', passwordType);
+    }
+</script>
+
+</body>
+</html>
