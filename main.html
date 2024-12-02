@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>Page Principale</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -15,15 +15,20 @@
             margin: 0;
             text-align: center;
         }
+
         h1 {
             color: #fff; /* Couleur du titre */
             font-size: 36px; /* Taille du titre */
-            margin-bottom: 20px; /* Espace sous le titre */
+            margin-bottom: 30px; /* Espace sous le titre */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre pour le texte */
         }
+
         .button-container {
             display: flex;
             gap: 30px; /* Espace entre les boutons */
+            justify-content: center; /* Centre les boutons horizontalement */
         }
+
         .button {
             padding: 15px 25px; /* Padding pour un bouton plus grand */
             border: none;
@@ -37,23 +42,30 @@
             justify-content: center; /* Centre le texte */
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre portée */
             transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transition */
+            width: 150px; /* Largeur fixe pour les boutons */
+            font-weight: bold; /* Gras pour le texte */
         }
+
         .button-youtube {
             background-color: #FF0000; /* Couleur YouTube */
             color: white;
         }
+
         .button-twitch {
             background-color: #9146FF; /* Couleur Twitch */
             color: white;
         }
+
         .button-tiktok {
             background-color: #69C9D0; /* Couleur TikTok */
             color: white;
         }
+
         .button:hover {
             transform: translateY(-5px); /* Élévation lors du survol */
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée */
         }
+
         .button:active {
             transform: translateY(0); /* Rétablit la position lors du clic */
         }
