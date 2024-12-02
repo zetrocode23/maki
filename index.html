@@ -14,10 +14,10 @@
             height: 100vh;
             margin: 0;
             color: #333;
-            flex-direction: column; /* Ajouté pour empiler le bouton et le conteneur de connexion */
+            flex-direction: column; /* Ajouté pour empiler les boutons et le conteneur de connexion */
         }
 
-        .redirect-button {
+        .redirect-button, .game-button {
             background-color: #5cb85c;
             color: white;
             border: none;
@@ -25,11 +25,11 @@
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
-            margin-bottom: 20px; /* Espacement entre le bouton et le conteneur de connexion */
+            margin-bottom: 20px; /* Espacement entre les boutons et le conteneur de connexion */
             transition: background-color 0.3s;
         }
 
-        .redirect-button:hover {
+        .redirect-button:hover, .game-button:hover {
             background-color: #4cae4c;
         }
 
@@ -102,6 +102,8 @@
 </head>
 <body>
 
+<button class="game-button" onclick="window.location.href='URL_DU_JEU_SNAKE'">Jouer au Snake Game</button>
+
 <button class="redirect-button" onclick="window.location.href='https://zetrocode.github.io/maki-esport/'">Redirect to Main Website</button>
 
 <div class="login-container">
@@ -120,9 +122,4 @@
         const correctPassword = 'amirbaroudi'; // Le mot de passe correct
         const errorMessage = document.getElementById('error-message');
 
-        if (password !== correctPassword) {
-            errorMessage.style.display = 'block'; // Affiche le message d'erreur
-            return false; // Empêche l'envoi du formulaire
-        }
-
-        errorMessage.style.display = 'none'; //
+       
