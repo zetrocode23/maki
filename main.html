@@ -3,114 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page de Connexion</title>
+    <title>Page Principale</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Dégradé de fond coloré */
             margin: 0;
-            color: #333;
-        }
-
-        .login-container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px; /* Légèrement plus arrondi */
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 400px;
-            transition: transform 0.2s;
-        }
-
-        .login-container:hover {
-            transform: scale(1.02);
-        }
-
-        .login-container h2 {
             text-align: center;
-            margin-bottom: 20px;
-            color: #5cb85c;
-            font-size: 24px; /* Taille de police augmentée */
         }
 
-        .login-container input[type="text"],
-        .login-container input[type="password"] {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            transition: border-color 0.3s;
+        h1 {
+            color: #fff; /* Couleur du titre */
+            font-size: 36px; /* Taille du titre */
+            margin-bottom: 30px; /* Espace sous le titre */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre pour le texte */
         }
 
-        .login-container input[type="text"]:focus,
-        .login-container input[type="password"]:focus {
-            border-color: #5cb85c;
-            outline: none;
+        .button-container {
+            display: flex;
+            gap: 30px; /* Espace entre les boutons */
+            justify-content: center; /* Centre les boutons horizontalement */
         }
 
-        .login-container input[type="submit"] {
-            width: 100%;
-            padding: 12px;
-            background-color: #5cb85c;
+        .button {
+            padding: 15px 25px; /* Padding pour un bouton plus grand */
             border: none;
-            border-radius: 4px;
-            color: white;
-            font-size: 16px;
+            border-radius: 10px; /* Coins arrondis */
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-
-        .login-container input[type="submit"]:hover {
-            background-color: #4cae4c;
-            transform: translateY(-2px);
-        }
-
-        .login-container input[type="submit"]:active {
-            background-color: #449d44;
-            transform: translateY(0);
-        }
-
-        .error-message {
-            color: red;
             text-align: center;
-            margin-top: 10px;
-            display: none;
+            font-size: 18px; /* Taille de la police */
+            text-decoration: none; /* Supprime le soulignement des liens */
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centre le texte */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre portée */
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transition */
+            width: 150px; /* Largeur fixe pour les boutons */
+            font-weight: bold; /* Gras pour le texte */
+        }
+
+        .button-youtube {
+            background-color: #FF0000; /* Couleur YouTube */
+            color: white;
+        }
+
+        .button-twitch {
+            background-color: #9146FF; /* Couleur Twitch */
+            color: white;
+        }
+
+        .button-tiktok {
+            background-color: #69C9D0; /* Couleur TikTok */
+            color: white;
+        }
+
+        .button:hover {
+            transform: translateY(-5px); /* Élévation lors du survol */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée */
+        }
+
+        .button:active {
+            transform: translateY(0); /* Rétablit la position lors du clic */
         }
     </style>
 </head>
 <body>
 
-<div class="login-container">
-    <h2>Connexion</h2>
-    <form id="loginForm" onsubmit="return validateForm()">
-        <input type="text" name="username" placeholder="Nom d'utilisateur" value="maki" required aria-label="Nom d'utilisateur">
-        <input type="password" name="password" placeholder="Mot de passe" required aria-label="Mot de passe">
-        <input type="submit" value="Se connecter" aria-label="Se connecter">
-        <div class="error-message" id="error-message">Le mot de passe est incorrect</div>
-    </form>
+<h1>Bienvenue Maki</h1>
+<div class="button-container">
+    <a href="https://www.youtube.com" class="button button-youtube">YouTube</a>
+    <a href="https://www.twitch.tv" class="button button-twitch">Twitch</a>
+    <a href="https://www.tiktok.com" class="button button-tiktok">TikTok</a>
 </div>
-
-<script>
-    function validateForm() {
-        const password = document.querySelector('input[name="password"]').value;
-        const correctPassword = 'amirbaroudi'; // Le mot de passe correct
-        const errorMessage = document.getElementById('error-message');
-
-        if (password !== correctPassword) {
-            errorMessage.style.display = 'block'; // Affiche le message d'erreur
-            return false; // Empêche l'envoi du formulaire
-        }
-
-        errorMessage.style.display = 'none'; // Cache le message d'erreur
-        window.location.href = 'main.html'; // Redirige vers main.html
-        return false; // Empêche l'envoi du formulaire pour éviter le rechargement
-    }
-</script>
 
 </body>
 </html>
