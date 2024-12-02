@@ -3,82 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Principale</title>
+    <title>Connexion - Collège d'Anjou</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Dégradé de fond coloré */
             margin: 0;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
             text-align: center;
         }
 
         h1 {
-            color: #fff; /* Couleur du titre */
-            font-size: 36px; /* Taille du titre */
-            margin-bottom: 30px; /* Espace sous le titre */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre pour le texte */
+            margin-bottom: 20px;
         }
 
-        .button-container {
-            display: flex;
-            gap: 30px; /* Espace entre les boutons */
-            justify-content: center; /* Centre les boutons horizontalement */
+        .input-group {
+            margin-bottom: 15px;
         }
 
-        .button {
-            padding: 15px 25px; /* Padding pour un bouton plus grand */
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
             border: none;
-            border-radius: 10px; /* Coins arrondis */
+            border-radius: 4px;
             cursor: pointer;
-            text-align: center;
-            font-size: 18px; /* Taille de la police */
-            text-decoration: none; /* Supprime le soulignement des liens */
-            display: flex;
-            align-items: center;
-            justify-content: center; /* Centre le texte */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre portée */
-            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transition */
-            width: 150px; /* Largeur fixe pour les boutons */
-            font-weight: bold; /* Gras pour le texte */
+            width: 100%;
         }
 
-        .button-youtube {
-            background-color: #FF0000; /* Couleur YouTube */
-            color: white;
+        button:hover {
+            background-color: #0056b3;
         }
 
-        .button-twitch {
-            background-color: #9146FF; /* Couleur Twitch */
-            color: white;
-        }
-
-        .button-tiktok {
-            background-color: #69C9D0; /* Couleur TikTok */
-            color: white;
-        }
-
-        .button:hover {
-            transform: translateY(-5px); /* Élévation lors du survol */
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée */
-        }
-
-        .button:active {
-            transform: translateY(0); /* Rétablit la position lors du clic */
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
         }
     </style>
 </head>
 <body>
-
-<h1>Bienvenue Maki</h1>
-<div class="button-container">
-    <a href="https://www.youtube.com" class="button button-youtube">YouTube</a>
-    <a href="https://www.twitch.tv" class="button button-twitch">Twitch</a>
-    <a href="https://www.tiktok.com" class="button button-tiktok">TikTok</a>
-</div>
-
+    <div class="login-container">
+        <h1>Connexion</h1>
+        <form action="/login" method="POST">
+            <div class="input-group">
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Se souvenir de moi</label>
+            </div>
+            <div class="input-group">
+                <a href="/forgot-password">Mot de passe oublié ?</a>
+            </div>
+            <button type="submit">Accéder</button>
+        </form>
+        <footer>
+            <p>&copy; 2023 Collège d'Anjou. Tous droits réservés.</p>
+            <p><a href="/terms">Conditions d'utilisation</a> | <a href="/privacy">Politique de confidentialité</a></p>
+        </footer>
+    </div>
 </body>
 </html>
